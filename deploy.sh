@@ -9,4 +9,6 @@ if [[ $stash = "y" ]];then
   echo "current branch: $branch"
   set -x
   git checkout develop > /dev/null
+  git pull  > /dev/null
+  git checkout -b release/$1  > /dev/null
 fi
