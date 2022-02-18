@@ -17,7 +17,7 @@ if [[ $stash = "y" ]];then
   git pull > /dev/null
   git merge release/$1
   git tag -a $1 -m $1 > /dev/null
-  git push origin HEAD --tags > /dev/null
+  git push --tags > /dev/null
   set +x
 
   echo "release $1 done, you need to deploy manually"
